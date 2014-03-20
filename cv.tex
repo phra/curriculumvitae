@@ -1,0 +1,123 @@
+%i primi parametri sono relativi alle dimensioni del carattere
+%ed alla tipologia di pagina. Potete scegliere tra
+%'10pt', '11pt' and '12pt', per la pagina 'a4paper', 'letterpaper', 'a5paper', %'legalpaper', 'executivepaper' o 'landscape')
+\documentclass[10pt,a4paper]{moderncv}
+
+% lo stile del nostro curriculum
+% come vedete ho scelto classic ma potete scegliere 
+% 'moderncv' 'casual' (si default),'classic', 'oldstyle' o 'banking'
+% e i colori 'blu', 'orange', 'green', 'red', 'purple', 'grey' o 'black'
+\moderncvtheme[blue]{classic}
+
+% alcuni pacchetti standard
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenx}
+\usepackage[scale=0.8,top=1cm, bottom=2cm]{geometry}
+
+% queste 2 righe servono per allargare la colonna di sinistra
+\setlength{\hintscolumnwidth}{4cm}
+\AtBeginDocument{\recomputelengths}
+
+% altri pacchetti standard
+\usepackage{hyperref}
+\hypersetup{colorlinks = true,linkcolor=blue,urlcolor=blue}
+
+% aggiungo la numerazione delle pagine (spesso inutile)
+% obbligatorio se si usa hyperref (bug)
+\pagenumbering{arabic}
+
+% Dati personali
+\firstname{Francesco}
+\familyname{Soncina}
+\title{Curriculum Vit\ae}
+\address{Via Rillosi, 6}{25087, Salò (BS)}
+\mobile{+39\,320\,0660220}
+% la mail ed il sito web avranno il collegamento multimediale
+% all'interno del pdf
+\email{greensoncio@gmail.com}
+%\homepage{www.ivanbortolin.it}
+% io ho omesso la foto, ma se voi la volete inserire basta
+%aggiungerla nella cartella e mettere il nome del file
+%\photo[100pt][0.6pt]{nome_file} 
+
+
+% da qui comincia il documento
+\begin{document}
+\maketitle
+
+% per non far comparire i numeri di pagina
+\pagestyle{empty}
+
+% con il comando \sectio andiamo a creare delle sezioni nel documento e potremo 
+% nominarle come più ci aggrada nonché spostarle all'interno del CV in
+% base alle nostre esigenze e stile
+\section{Informazioni Personali}
+% per aggiungere voci nelle varie sezioni basta dare il comando
+% \cvline {il_mio_testo}{il_mio_testo}
+\cvline{nome}{Francesco}
+\cvline{cognome}{Soncina}
+\cvline{sesso}{maschile}
+\cvline{luogo e data di nascita}{Gavardo (BS), 23 aprile 1990}
+\cvline{nazionalità}{italiana}
+\cvline{stato civile}{celibe}
+\cvline{patente di guida}{cat. B, conseguita il 17 gennaio 2009}
+
+\section{Titoli di Studio}
+
+\cvline{giugno 2010}{\textbf{Diploma di Maturità Scientifica}\newline
+presso Liceo Scientifico Enrico Fermi a Salò con votazione 71/100}
+
+\cvline{marzo 2014}{\textbf{Laurea triennale}\newline
+in Informatica presso l'Università degli Studi di Bologna con votazione 102/110}
+
+\cvline{}{\textbf{Tesi di laurea}\newline
+{\em IEEE 802.21: Media Independent Handover}\newline
+Le competenze approfondite durante la stesura sono state: \newline
+- architettura standard IEEE 802.21 \newline
+- analisi dell'implementazione open-source "ODTONE"\newline
+- realizzazione di un proxy simplex e full-duplex ad alta affidabilità}
+
+\section{Accreditamenti}
+\cvitem{maggio 2013}{\textbf{Test TECO}\newline Esito: 1225 (media nazionale: 1000)}
+\cvitem{gennaio 2013} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
+\cvitem{novembre 2012} {\textbf{Idoneità Linguistica Inglese B1}\newline Idoneità linguistica di livello B1 conseguita presso il CILTA dell'Università di Bologna}
+\cvitem{gennaio 2012} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
+\cvitem{gennaio 2011} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
+
+\section{Lingue Straniere}
+\cvitem{}{\textbf{Inglese}\newline Scritto: ottima\newline Parlato: buono}
+\section{Conoscenze Informatiche}
+\cvitem{}{\textbf{Linguaggi conosciuti:}\newline C, C++ (+ boost), Java (+ android, libgdx, gwt), Python, Bash, HTML5, CSS3, Javascript (+ jquery), SQL, Latex (+ tikz)}
+
+\section{Progetti}
+\cvitem{marzo 2014} {\textbf{Realizzazione progetto di Tesi}\newline Sviluppo di un proxy ad alta affidabilità che possa utilizzare più interfacce di rete per comunicare in modo {\em simplex} e {\em full-duplex} con un'altro {\em peer} [scritto in: C++ con libreria Boost]}
+\cvitem{gennaio 2014} {\textbf{Realizzazione progetto del corso di "Sviluppo di Sistemi Virtuali"}\newline Sviluppo di un modulo per la macchina virtuale parziale UMView per il controllo della connettività di un singolo processo attraverso l'intercettazione delle syscalls di rete [scritto in: C]}
+\cvitem{novembre 2013} {\textbf{Rilasciata prima versione dell'applicazione Android {\em Trovatutto}}\newline Pubblicazione di un'applicazione per smartphones Android per la mappatura di esercizi commerciali e servizi pubblici di tutta Italia, dove qualsiasi utente può aggiungere istantaneamente nuovi punti di interesse visibili da tutti [scritto in: Java (Android), Python, SQL]}
+\cvitem{settembre 2012} {\textbf{Realizzazione progetto del corso di "Sistemi Operativi"}\newline Sviluppo di un kernel minimale per l'architettura MIPS [scritto in: C]}
+\cvitem{luglio 2012} {\textbf{Rilasciata prima versione di {\em phoxy}}\newline Pubblicazione di un proxy in grado di trasformare la comunicazione TCP tra un client ed un server in datagrammi UDP eventualmente cifrati con algoritmo a chiave simmetrica {\em AES256} [scritto in: C]} 
+\cvitem{maggio 2012} {\textbf{Realizzazione progetto del corso di "Reti di Calcolatori"}\newline Sviluppo di un proxy in grado di trasformare un flusso TCP in datagrammi UDP, gestendo i pacchetti persi, doppi e fuori ordine sfruttando tre canali di comunicazione [scritto in: C]}
+\cvitem{febbraio 2012} {\textbf{Realizzazione progetto del corso di "Tecnologie Web"}\newline Sviluppo di un sito web basato su architettura REST per facilitare la geolocalizzazione di negozi e servizi pubblici di Bologna ed altre città [scritto in: HTML5, CSS3, Javascript (jquery), Python]}
+
+\section{Esperienze Lavorative}
+\cvitem{marzo 2014} {\textbf{Part-time studentesco}\newline Svolto presso la biblioteca centralizzata del Dipartimento di Agraria}
+\cvitem{luglio 2012} {\textbf{Part-time studentesco}\newline Svolto presso il laboratorio del Dipartimento di Scienze dell'Informazione}
+
+% voi aggiungete tutte le voci che ritenete opportune
+% nel caso abbiate delle pubblicazioni, dopo aver creato l'opportuno file .bib
+% NB: io ho disbilitato questi comandi
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{nome_file.bib}    
+
+% Ora ci resta solo che inserire la liberatoria per la privaci
+% Io ho scannerizzato direttamente la mia firma e l'ho inserita come 
+% immagine. Nel caso vogliate mettere dei puntini e firmare personalmente
+% ogni CV dopo il "in fede" scrivere \makebox[9cm]{\dotfill}
+\vspace{\fill} 
+{\footnotesize\noindent 
+Il sottoscritto è a conoscenza che, ai sensi dell'art. 26 della legge 15/68, le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi sono puniti ai sensi del codice penale e delle leggi speciali. Inoltre, il sottoscritto autorizza al trattamento dei dati personali, in conformità alle disposizioni della legge sulla privacy  (D.L.196/03).}
+\vspace*{0.8cm}\\
+Udine, \today\hfill In fede: %\makebox[6cm] %{\includegraphics[scale=.1]{picture}}
+\makebox[9cm]{\dotfill}
+%per scalare la grandezza dell'immagine di firma, variate il parametro “scale”
+\end{document}
