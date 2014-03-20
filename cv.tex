@@ -1,7 +1,7 @@
 %i primi parametri sono relativi alle dimensioni del carattere
 %ed alla tipologia di pagina. Potete scegliere tra
 %'10pt', '11pt' and '12pt', per la pagina 'a4paper', 'letterpaper', 'a5paper', %'legalpaper', 'executivepaper' o 'landscape')
-\documentclass[10pt,a4paper]{moderncv}
+\documentclass[11pt,a4paper]{moderncv}
 
 % lo stile del nostro curriculum
 % come vedete ho scelto classic ma potete scegliere 
@@ -11,7 +11,9 @@
 
 % alcuni pacchetti standard
 \usepackage[italian]{babel}
-\usepackage[utf8]{inputenx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage[scale=0.8,top=1cm, bottom=2cm]{geometry}
 
 % queste 2 righe servono per allargare la colonna di sinistra
@@ -19,13 +21,24 @@
 \AtBeginDocument{\recomputelengths}
 
 % altri pacchetti standard
-\usepackage{hyperref}
+%\usepackage{hyperref}
+%\usepackage{url}
+
+\usepackage{url}
+\usepackage[bookmarks,pdftex,
+pdfauthor={Francesco Soncina},
+pdftitle={Curriculum Vitae},
+pdfsubject={Curriculum Vitae},
+pdfproducer={Latex with hyperref},
+pdfcreator={pdflatex}]{hyperref}
+\usepackage{booktabs}
+
 \hypersetup{colorlinks = true,linkcolor=blue,urlcolor=blue}
 
 % aggiungo la numerazione delle pagine (spesso inutile)
 % obbligatorio se si usa hyperref (bug)
 \pagenumbering{arabic}
-\linespread{1,3}
+\linespread{1,4}
 
 % Dati personali
 \firstname{Francesco}
@@ -65,18 +78,19 @@
 
 \section{Titoli di Studio}
 
-\cvline{giugno 2010}{\textbf{Diploma di Maturità Scientifica}\newline
-presso Liceo Scientifico Enrico Fermi a Salò con votazione 71/100}
-
 \cvline{marzo 2014}{\textbf{Laurea triennale}\newline
 in Informatica presso l'Università degli Studi di Bologna con votazione 102/110}
 
-\cvline{}{\textbf{Tesi di laurea}\newline
+\cvline{}{\textbf{Tesi di laurea} \cite{tesi}\newline
 {\em IEEE 802.21: Media Independent Handover}\newline
 Le competenze approfondite durante la stesura sono state: \newline
 - architettura standard IEEE 802.21 \newline
 - analisi dell'implementazione open-source "ODTONE"\newline
 - realizzazione di un proxy simplex e full-duplex ad alta affidabilità}
+
+
+\cvline{giugno 2010}{\textbf{Diploma di Maturità Scientifica}\newline
+presso Liceo Scientifico Enrico Fermi a Salò con votazione 71/100}
 
 \section{Accreditamenti}
 \cvitem{maggio 2013}{\textbf{Test TECO}\newline Esito: 1225 (media nazionale: 1000)}
@@ -86,18 +100,32 @@ Le competenze approfondite durante la stesura sono state: \newline
 \cvitem{gennaio 2011} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
 
 \section{Lingue Straniere}
-\cvitem{}{\textbf{Inglese}\newline Scritto: ottima\newline Parlato: buono}
+\cvitem{}{\textbf{Inglese}\newline Scritto: ottimo\newline Parlato: buono}
+
 \section{Conoscenze Informatiche}
-\cvitem{}{\textbf{Linguaggi conosciuti:}\newline C, C++ (+ boost), Java (+ android, libgdx, gwt), Python, Bash, HTML5, CSS3, Javascript (+ jquery), SQL, Latex (+ tikz)}
+\cvitem{\textbf{Linguaggi conosciuti}}{C, C++ (+ boost), Java (+ android, libgdx, gwt), Python, Bash, HTML5, CSS3, Javascript (+ jquery), SQL, \LaTeX (+ tikz)}
+\cvitem{\textbf{Competenze acquisite}}{Amministrazione remota di servers GNU/Linux\newline Configurazione di servers Postgresql\newline Familiarità con terminali Bash\newline Sviluppo web con architettura REST\newline Sviluppo applicazioni mobili per Android con API native oppure con {\em LibGDX}\newline Sviluppo software in C secondo standard ANSI/POSIX\newline Sviluppo scripts Bash o Python\newline Sviluppo applicazioni Java native oppure con frameworks GWT, LibGDX, Android}
+
+\cvitem{\textbf{Daily distro}}{Debian}
 
 \section{Progetti}
-\cvitem{marzo 2014} {\textbf{Realizzazione progetto di Tesi}\newline Sviluppo di un proxy ad alta affidabilità che possa utilizzare più interfacce di rete per comunicare in modo {\em simplex} e {\em full-duplex} con un'altro {\em peer} [scritto in: C++ con libreria Boost]}
-\cvitem{gennaio 2014} {\textbf{Realizzazione progetto del corso di "Sviluppo di Sistemi Virtuali"}\newline Sviluppo di un modulo per la macchina virtuale parziale UMView per il controllo della connettività di un singolo processo attraverso l'intercettazione delle syscalls di rete [scritto in: C]}
-\cvitem{novembre 2013} {\textbf{Rilasciata prima versione dell'applicazione Android {\em Trovatutto}}\newline Pubblicazione di un'applicazione per smartphones Android per la mappatura di esercizi commerciali e servizi pubblici di tutta Italia, dove qualsiasi utente può aggiungere istantaneamente nuovi punti di interesse visibili da tutti [scritto in: Java (Android), Python, SQL]}
-\cvitem{settembre 2012} {\textbf{Realizzazione progetto del corso di "Sistemi Operativi"}\newline Sviluppo di un kernel minimale per l'architettura MIPS [scritto in: C]}
-\cvitem{luglio 2012} {\textbf{Rilasciata prima versione di {\em phoxy}}\newline Pubblicazione di un proxy in grado di trasformare la comunicazione TCP tra un client ed un server in datagrammi UDP eventualmente cifrati con algoritmo a chiave simmetrica {\em AES256} [scritto in: C]} 
-\cvitem{maggio 2012} {\textbf{Realizzazione progetto del corso di "Reti di Calcolatori"}\newline Sviluppo di un proxy in grado di trasformare un flusso TCP in datagrammi UDP, gestendo i pacchetti persi, doppi e fuori ordine sfruttando tre canali di comunicazione [scritto in: C]}
-\cvitem{febbraio 2012} {\textbf{Realizzazione progetto del corso di "Tecnologie Web"}\newline Sviluppo di un sito web basato su architettura REST per facilitare la geolocalizzazione di negozi e servizi pubblici di Bologna ed altre città [scritto in: HTML5, CSS3, Javascript (jquery), Python]}
+\cvitem{marzo 2014} {\textbf{Realizzazione progetto di Tesi} \cite{progettotesi}\newline Sviluppo di un proxy ad alta affidabilità che possa utilizzare più interfacce di rete per comunicare in modo {\em simplex} oppure {\em full-duplex} con un altro {\em peer} [scritto in: C++ con libreria Boost]}
+
+\cvitem{gennaio 2014} {\textbf{Realizzazione progetto del corso di "Sviluppo di Sistemi Virtuali"} \cite{vsd}\newline Sviluppo di un modulo per la macchina virtuale parziale UMView per il controllo della connettività di un singolo processo attraverso l'intercettazione delle {\em syscalls} di rete [scritto in: C]}
+
+\cvitem{novembre 2013} {\textbf{Rilascio prima versione dell'applicazione Android {\em Trovatutto}} \cite{trovatutto} \newline Pubblicazione di un'applicazione per {\em smartphones} Android per la mappatura di esercizi commerciali e servizi pubblici di tutta Italia, dove qualsiasi utente può aggiungere istantaneamente nuovi punti di interesse visibili da tutti [scritto in: Java (Android), Python, SQL (postgresql)]}
+
+\cvitem{settembre 2013} {\textbf{Realizzazione progetto del corso di "Sviluppo di Applicazioni Mobili"} \cite{shuttle}\newline Sviluppo di un videogioco single-player e multi-player 2D {\em cross-platform} per Android, iOS, PC e HTML5 attraverso il framework {\em LibGDX} [scritto in: Java (LibGDX)]}
+
+\cvitem{luglio 2013} {\textbf{Realizzazione progetto del corso di "Ingegneria del Software"} \cite{lis}\newline Sviluppo di una piattaforma {\em browser-based} per la gestione di un sistema di noleggio automobili distribuito [scritto in: Java (GWT), SQL (postgresql)]}
+
+\cvitem{settembre 2012} {\textbf{Realizzazione progetto del corso di "Sistemi Operativi"} \cite{so}\newline Sviluppo di un kernel minimale per l'architettura MIPS [scritto in: C]}
+
+\cvitem{luglio 2012} {\textbf{Rilascio prima versione di {\em phoxy}} \cite{phoxy}\newline Pubblicazione di un proxy in grado di trasformare la comunicazione TCP tra un client ed un server in datagrammi UDP eventualmente cifrati con algoritmo a chiave simmetrica {\em AES256} [scritto in: C]}
+
+\cvitem{maggio 2012} {\textbf{Realizzazione progetto del corso di "Reti di Calcolatori"} \cite{reti}\newline Sviluppo di un proxy in grado di trasformare un flusso TCP in datagrammi UDP, gestendo i pacchetti persi, doppi, fuori ordine e sfruttando tre canali di comunicazione [scritto in: C]}
+
+\cvitem{febbraio 2012} {\textbf{Realizzazione progetto del corso di "Tecnologie Web"} \cite{progettotw} \cite{codicetw}\newline Sviluppo di un sito web basato su architettura REST per facilitare la geolocalizzazione di negozi e servizi pubblici di Bologna ed altre città [scritto in: HTML5, CSS3, Javascript (jquery), Python]}
 
 \section{Esperienze Lavorative}
 \cvitem{marzo 2014} {\textbf{Part-time studentesco}\newline Svolto presso la biblioteca centralizzata del Dipartimento di Agraria}
@@ -107,18 +135,18 @@ Le competenze approfondite durante la stesura sono state: \newline
 % nel caso abbiate delle pubblicazioni, dopo aver creato l'opportuno file .bib
 % NB: io ho disbilitato questi comandi
 %\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{nome_file.bib}    
+\bibliographystyle{unsrt}
+\bibliography{biblio.bib}    
 
 % Ora ci resta solo che inserire la liberatoria per la privaci
 % Io ho scannerizzato direttamente la mia firma e l'ho inserita come 
 % immagine. Nel caso vogliate mettere dei puntini e firmare personalmente
 % ogni CV dopo il "in fede" scrivere \makebox[9cm]{\dotfill}
-\vspace{\fill} 
-{\footnotesize\noindent 
-Il sottoscritto è a conoscenza che, ai sensi dell'art. 26 della legge 15/68, le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi sono puniti ai sensi del codice penale e delle leggi speciali. Inoltre, il sottoscritto autorizza al trattamento dei dati personali, in conformità alle disposizioni della legge sulla privacy  (D.L.196/03).}
+\vspace{\fill}
+{\footnotesize\noindent
+Il sottoscritto è a conoscenza che, ai sensi dell'art. 26 della legge 15/68, le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi sono puniti ai sensi del codice penale e delle leggi speciali ed autorizza al trattamento dei dati personali, in conformità alle disposizioni della legge sulla privacy (D.L.196/03). Inoltre, il sottoscritto ricorda che tutto il codice allegato è rilasciato sotto licenza GNU GPLv2 (o versioni successive) e le relative documentazioni sotto licenza CC BY-NC-SA, ove non specificato diversamente.}
 \vspace*{0.8cm}\\
-Bologna, \today\hfill In fede: %\makebox[6cm] %{\includegraphics[scale=.1]{picture}}
-\makebox[9cm]{\dotfill}
+Bologna, \today\hfill In fede: \makebox[7cm] {\includegraphics[scale=.07]{firma}}
+%\makebox[9cm]{\dotfill}
 %per scalare la grandezza dell'immagine di firma, variate il parametro “scale”
 \end{document}
