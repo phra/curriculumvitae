@@ -24,7 +24,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
-\usepackage[italian]{babel}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -45,7 +45,7 @@
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vit\ae}
-\address{Via Rillosi, 6}{Salò, 25087, Italia}
+\address{Via Rillosi, 6}{Salò, 25087, Italy}
 \mobile{+39 320 0660220}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
@@ -65,43 +65,45 @@
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Istruzione}
+\section{Education}
 
-\cventry{2010--2013}{Informatica}{}{Università di Bologna}{\textit{102}}{Laurea triennale}  % Arguments not required can be left empty
+\cventry{2010--2013}{Computer Science}{}{University of Bologna}{\textit{102}}{Bachelor degree}  % Arguments not required can be left empty
 %\cventry{2007--2010}{Bachelor of Business Studies}{The University of California}{Berkeley}{\textit{GPA -- 7.5}}{Specialized in Commerce}
 
-\section{Tesi di laurea}
+\section{Thesis}
 
-\cvitem{Titolo}{\emph{IEEE 802.21: Media Independent Handover}}
-\cvitem{Relatore}{Prof. Vittorio Ghini}
-\cvitem{Materia}{Reti di calcolatori}
-\cvitem{Descrizione}{Le competenze approfondite durante la stesura sono state: \begin{itemize}
-		\item architettura standard IEEE 802.21
-		\item analisi dell'implementazione open-source "ODTONE"
-		\item realizzazione di un proxy {\em simplex} e {\em full-duplex} ad alta affidabilità
-\end{itemize}}
+\cvitem{Title}{\emph{IEEE 802.21: Media Independent Handover}}
+\cvitem{Supervisor}{Prof. Vittorio Ghini}
+\cvitem{Class}{Computer Network}
+\cvitem{Subject}{
+	\begin{itemize}
+		\item Standard IEEE 802.21
+		\item Analysis of open-source implementation ODTONE
+		\item Development of HA simplex/full-duplex proxy on top of ODTONE
+	\end{itemize}}
 
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Accreditamenti}
+\section{Awards and Honors}
 
-\cvitem{maggio 2013}{Test TECO -- 1225}
-\cvitem{gennaio 2013}{Borsa di Studio}
-\cvitem{novembre 2012}{Inglese B1}
-\cvitem{gennaio 2012}{Borsa di Studio}
-\cvitem{gennaio 2011}{Borsa di Studio}
+\cvitem{2016 / 04}{8th @ CTF "Hands off my money" -- 265}
+\cvitem{2013 / 05}{Test TECO -- 1225}
+\cvitem{2013 / 01}{Scholarship}
+\cvitem{2012 / 11}{English B1}
+\cvitem{2012 / 01}{Scholarship}
+\cvitem{2011 / 01}{Scholarship}
 
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Lingue}
+\section{Foreign languages}
 
-\cvitemwithcomment{Italiano}{Madrelingua}{}
-\cvitemwithcomment{English}{Intermedio}{scritto ottimo, parlato buono}
+\cvitemwithcomment{Italian}{Native}{}
+\cvitemwithcomment{English}{Proficient}{}
 %\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
 %\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
 
@@ -110,53 +112,47 @@
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Esperienze lavorative}
+\section{Work experiences}
 
 %\subsection{Vocational}
 
-\cventry{luglio 2014 -- maggio 2015}{IT Consultant}{\textsc{ALTEN}}{Bologna}{presso UniCredit Group}{
+\cventry{2016/02 -- present}{Full Stack Developer}{\textsc{ESIS}}{Bologna}{}{
 \begin{itemize}
-\item Analisi
+	\item JavaScript Specialist
+	\item Lecturer
+\end{itemize}}
+
+\cventry{2014/07 -- 2015/05}{IT Consultant}{\textsc{ALTEN}}{Bologna}{@ UniCredit Group}{
+\begin{itemize}
+\item Analysis
 	\begin{itemize}
-	\item Raccolta e formalizzazione dei requisiti e vincoli
+	\item Requirements gathering
 	\item Analisi dei requisiti e vincoli
-	\item Analisi approfondita delle specifiche e formalizzazione logica dei processi ed entità coinvolte con produzione di diagrammi E/R e specifiche workflow
+	\item E/R and workflow specs
 	\end{itemize}
-\item Progettazione
+\item Development
 	\begin{itemize}
-	\item Realizzazione del documento di specifica del design
-	\item Realizzazione mockups e stime effort
+	\item Development of a prototypal solution based on JavaEE + Struts2 + Hibernate stack
 	\end{itemize}
-\item Sviluppo
+\item Functional
 	\begin{itemize}
-	\item Sviluppo iniziale della soluzione proposta: (successivamente sviluppato in outsourcing)
-Progettazione di una soluzione basata su stack JavaEE + Struts2 + Hibernate, con particolare attenzione a rimanere indipendenti dall’application server e dal database utilizzato
-	\end{itemize}
-\item Funzionale
-	\begin{itemize}
-	\item Supporto allo sviluppo per i processi (sviluppato in outsourcing)
-	\item Verifiche sull’andamento dei lavori
-	\item Validazione soluzione realizzata
+	\item Progress of work monitoring
+	\item Feature validation
 	\end{itemize}
 \item UAT:
 	\begin{itemize}
-	\item Realizzazione del documento di specifica dell’User Acceptance Test, ovvero scrittura dei casi d’uso da testare in fase di collaudo, il quale esito formalizza l’accettazione da parte del cliente della soluzione realizzata
-	\end{itemize}
-\item Collaudi:
-	\begin{itemize}
-	\item Partecipazione alle sessioni di collaudo al fine di identificare le anomalie e segnalarle al team di sviluppo arricchendo le segnalazioni con dettagli tecnici
+	\item Wrinting of User Acceptance Test specs
 	\end{itemize}
 \item Testing / QA
 	\begin{itemize}
-	\item Creazione segnalazioni
-	\item Classificazione e monitoraggio segnalazioni
-	\item Supporto risoluzioni anomalie
-	\item Testing delle correzioni effettuate
-	\item Promozione builds e gestione richieste di deploy
+	\item Tickets management
+	\item Project Manager support
+	\item Validation of bugs resolutions
+	\item Deployment requests management
 	\end{itemize}
 \item Customer Support
 	\begin{itemize}
-	\item Gestione ed assegnazione delle segnalazioni
+	\item Tickets management
 	\end{itemize}
 \end{itemize}}
 
@@ -167,45 +163,44 @@ Progettazione di una soluzione basata su stack JavaEE + Struts2 + Hibernate, con
 
 %------------------------------------------------
 
-\subsection{Miscellanea}
+\subsection{Miscellaneous}
 
-\cventry{marzo 2014}{Part-time studentesco}{Università di Bologna}{}{}{}
-\cventry{luglio 2012}{Part-time studentesco}{Università di Bologna}{}{}{}
+\cventry{2014 / 03}{Part-time}{University of Bologna}{}{}{}
+\cventry{2012 / 07}{Part-time}{University of Bologna}{}{}{}
 
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Competenze}
+\section{Skills}
 
-\cvitem{Skills}{GNU/Linux SysAdmin, DevOps, IT Automation}
-\cvitem{Linguaggi}{Bash, JavaScript, C, C++, Java, Python, SQL, HTML5, CSS3, \LaTeX}
-\cvitem{Applicativi}{Nginx, PostgreSQL, NodeJS, MySQL, Apache}
+\cvitem{DevOps}{SysAdmin, Provisioning, Continous integration, Continous delivery}
+\cvitem{Languages}{Bash, JavaScript, Python, SQL, HTML5, CSS3, C, C++, Java, \LaTeX}
+\cvitem{Applications}{Nginx, PostgreSQL, NodeJS, MySQL, Apache}
 \cvitem{DVCS}{Git}
-\cvitem{Provisioning}{Vagrant, Ansible}
-\cvitem{Altro}{ViM, Tmux}
+\cvitem{Misc}{ViM, Tmux}
 \cvitem{Daily distro}{Debian}
 
 
-\section{Progetti}
-\cvitem{marzo 2014} {\textbf{Realizzazione progetto di Tesi} \newline Sviluppo di un proxy ad alta affidabilità che possa utilizzare più interfacce di rete per comunicare in modo {\em simplex} oppure {\em full-duplex} con un altro {\em peer} [scritto in: C++ con libreria Boost]}
+\section{Projects}
+\cvitem{2014 / 03} {\textbf{Thesis} \newline Cross-platform Multi-network High-Availibilty Full-duplex Proxy [C++ / Boost]}
 
-\cvitem{gennaio 2014} {\textbf{Realizzazione progetto del corso di "Sviluppo di Sistemi Virtuali"} \newline Sviluppo di un modulo per la macchina virtuale parziale UMView per il controllo della connettività di un singolo processo attraverso l'intercettazione delle {\em syscalls} di rete [scritto in: C]}
+\cvitem{2014 / 01} {\textbf{Virtualization class project} \newline UMView partial virtual machine module for monitoring of network connections [C]}
 
-\cvitem{novembre 2013} {\textbf{Rilascio prima versione dell'applicazione Android {\em Trovatutto}} \newline Pubblicazione di un'applicazione per {\em smartphones} Android per la mappatura di esercizi commerciali e servizi pubblici di tutta Italia, dove qualsiasi utente può aggiungere istantaneamente nuovi punti di interesse visibili da tutti [scritto in: Java (Android), Python, SQL (PostgreSQL)]}
+\cvitem{2013 / 11} {\textbf{Android application {\em Trovatutto}} \newline Collaborative application for geolocation of shops, services, etc [Java (Android), Python, SQL (PostgreSQL)]}
 
-\cvitem{settembre 2013} {\textbf{Realizzazione progetto del corso di "Sviluppo di Applicazioni Mobili"} \newline Sviluppo di un videogioco single-player e multi-player 2D {\em cross-platform} per Android, iOS, PC e HTML5 attraverso il framework {\em LibGDX} [scritto in: Java (LibGDX)]}
+\cvitem{2013 / 09} {\textbf{Mobile application class project} \newline Development of a cross-platform 2D mobile game based on LibGDX framework. {\em LibGDX} [Java (LibGDX)]}
 
-\cvitem{luglio 2013} {\textbf{Realizzazione progetto del corso di "Ingegneria del Software"} \newline Sviluppo di una piattaforma {\em browser-based} per la gestione di un sistema di noleggio automobili distribuito [scritto in: Java (GWT), SQL (postgresql)]}
+\cvitem{2013 / 07} {\textbf{Software engineering class project} \newline Browser-based car rental system [Java (GWT), SQL (postgresql)]}
 
-\cvitem{settembre 2012} {\textbf{Realizzazione progetto del corso di "Sistemi Operativi"} \newline Sviluppo di un kernel minimale per l'architettura MIPS [scritto in: C]}
+\cvitem{2012 / 09} {\textbf{Operating system class project} \newline Micro kernel for MIPS architecture [C]}
 
-\cvitem{luglio 2012} {\textbf{Rilascio prima versione di {\em phoxy}} \newline Pubblicazione di un proxy in grado di trasformare la comunicazione TCP tra un client ed un server in datagrammi UDP eventualmente cifrati con algoritmo a chiave simmetrica {\em AES256} [scritto in: C]}
+\cvitem{2012 / 07} {\textbf{Phoxy} \newline TCP-to-UDP-to-TCP proxy w/ AES support [scritto in: C]}
 
-\cvitem{maggio 2012} {\textbf{Realizzazione progetto del corso di "Reti di Calcolatori"}\newline Sviluppo di un proxy in grado di trasformare un flusso TCP in datagrammi UDP, gestendo i pacchetti persi, doppi, fuori ordine e sfruttando tre canali di comunicazione [scritto in: C]}
+\cvitem{2012 / 05} {\textbf{Computer networks class project}\newline TCP-to-UDP-to-TCP proxy [C]}
 
-\cvitem{febbraio 2012} {\textbf{Realizzazione progetto del corso di "Tecnologie Web"}\newline Sviluppo di un sito web basato su architettura REST per facilitare la geolocalizzazione di negozi e servizi pubblici di Bologna ed altre città [scritto in: HTML5, CSS3, Javascript (jQuery), Python]}
+\cvitem{2012 / 02} {\textbf{Web Development class project}\newline Browser based service for geolocating shops, pharmacies, etc [HTML5, CSS3, Javascript (jQuery), Python]}
 
 
 %----------------------------------------------------------------------------------------
@@ -222,18 +217,18 @@ Progettazione di una soluzione basata su stack JavaEE + Struts2 + Hibernate, con
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Interessi}
+\section{Interests}
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
 %\cvlistdoubleitem{Crittografia}{Crittografia}
 %\cvlistdoubleitem{Forensica}{Dancing}
-\cvlistitem{Sicurezza informatica}
-\cvlistitem{Crittografia}
-\cvlistitem{Forensica}
-\cvlistitem{Prototipazione rapida}
+\cvlistitem{Computer security}
+\cvlistitem{Pentesting}
+\cvlistitem{Forensics}
+\cvlistitem{DevOps}
+\cvlistitem{Rapid prototyping}
 \cvlistitem{IT Automation}
-\cvlistitem{Continous Integration}
 
 %----------------------------------------------------------------------------------------
 %	COVER LETTER
