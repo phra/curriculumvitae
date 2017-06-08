@@ -1,152 +1,287 @@
-%i primi parametri sono relativi alle dimensioni del carattere
-%ed alla tipologia di pagina. Potete scegliere tra
-%'10pt', '11pt' and '12pt', per la pagina 'a4paper', 'letterpaper', 'a5paper', %'legalpaper', 'executivepaper' o 'landscape')
-\documentclass[11pt,a4paper]{moderncv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% lo stile del nostro curriculum
-% come vedete ho scelto classic ma potete scegliere 
-% 'moderncv' 'casual' (si default),'classic', 'oldstyle' o 'banking'
-% e i colori 'blu', 'orange', 'green', 'red', 'purple', 'grey' o 'black'
-\moderncvtheme[blue]{classic}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-% alcuni pacchetti standard
-\usepackage[italian]{babel}
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage[scale=0.8,top=1cm, bottom=2cm]{geometry}
+%\usepackage[T1]{fontenc}
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-% queste 2 righe servono per allargare la colonna di sinistra
-\setlength{\hintscolumnwidth}{4cm}
-\AtBeginDocument{\recomputelengths}
-
-% altri pacchetti standard
-%\usepackage{hyperref}
-%\usepackage{url}
-
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage{url}
-\usepackage[bookmarks,pdftex,
-pdfauthor={Francesco Soncina},
-pdftitle={Curriculum Vitae},
-pdfsubject={Curriculum Vitae},
-pdfproducer={Latex with hyperref},
-pdfcreator={pdflatex}]{hyperref}
-\usepackage{booktabs}
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
-\hypersetup{colorlinks = true,linkcolor=blue,urlcolor=blue}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
 
-% aggiungo la numerazione delle pagine (spesso inutile)
-% obbligatorio se si usa hyperref (bug)
-\pagenumbering{arabic}
-\linespread{1,4}
+\firstname{Francesco} % Your first name
+\familyname{Soncina} % Your last name
 
-% Dati personali
-\firstname{Francesco}
-\familyname{Soncina}
+% All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vit\ae}
-\address{Via Rillosi, 6}{25087, Salò (BS)}
-\mobile{+39\,320\,0660220}
-% la mail ed il sito web avranno il collegamento multimediale
-% all'interno del pdf
+\address{}{Amsterdam, NL}
+%\mobile{+39 320 0660220}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
 \email{greensoncio@gmail.com}
-%\homepage{www.ivanbortolin.it}
-% io ho omesso la foto, ma se voi la volete inserire basta
-%aggiungerla nella cartella e mettere il nome del file
-%\photo[100pt][0.6pt]{nome_file} 
+\homepage{github.com/phra}{github/phra} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
 
-% da qui comincia il documento
+%----------------------------------------------------------------------------------------
+
 \begin{document}
-\maketitle
 
-% per non far comparire i numeri di pagina
-%\pagestyle{empty}
+\makecvtitle % Print the CV title
 
-% con il comando \sectio andiamo a creare delle sezioni nel documento e potremo 
-% nominarle come più ci aggrada nonché spostarle all'interno del CV in
-% base alle nostre esigenze e stile
-\section{Informazioni Personali}
-% per aggiungere voci nelle varie sezioni basta dare il comando
-% \cvline {il_mio_testo}{il_mio_testo}
-\cvline{nome}{Francesco}
-\cvline{cognome}{Soncina}
-\cvline{sesso}{maschile}
-\cvline{luogo e data di nascita}{Gavardo (BS), 23 aprile 1990}
-\cvline{nazionalità}{italiana}
-\cvline{stato civile}{celibe}
-\cvline{patente di guida}{cat. B, conseguita il 17 gennaio 2009}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
-\section{Titoli di Studio}
+\section{Education}
 
-\cvline{marzo 2014}{\textbf{Laurea triennale}\newline
-in Informatica presso l'Università degli Studi di Bologna con votazione 102/110}
+\cventry{2010--2013}{Computer Science}{}{University of Bologna}{\textit{102}}{Bachelor degree}  % Arguments not required can be left empty
+%\cventry{2007--2010}{Bachelor of Business Studies}{The University of California}{Berkeley}{\textit{GPA -- 7.5}}{Specialized in Commerce}
 
-\cvline{}{\textbf{Tesi di laurea} \cite{tesi}\newline
-{\em IEEE 802.21: Media Independent Handover}\newline
-Le competenze approfondite durante la stesura sono state: \newline
-- architettura standard IEEE 802.21 \newline
-- analisi dell'implementazione open-source "ODTONE"\newline
-- realizzazione di un proxy {\em simplex} e {\em full-duplex} ad alta affidabilità}
+\section{Thesis}
 
-\cvline{giugno 2010}{\textbf{Diploma di Maturità Scientifica}\newline
-presso Liceo Scientifico Enrico Fermi a Salò con votazione 71/100}
+\cvitem{Title}{\emph{IEEE 802.21: Media Independent Handover}}
+\cvitem{Supervisor}{Prof. Vittorio Ghini}
+\cvitem{Class}{Computer Network}
+\cvitem{Subject}{
+	\begin{itemize}
+		\item Standard IEEE 802.21
+		\item Analysis of open-source implementation ODTONE
+		\item Development of HA simplex/full-duplex proxy on top of ODTONE
+	\end{itemize}}
 
-\section{Esperienze Lavorative}
-\cvitem{luglio 2014 - maggio 2015}{\textbf{IT Consultant}\newline ALTEN Italia presso UniCredit}
-\cvitem{marzo 2014} {\textbf{Part-time studentesco}\newline Svolto presso la biblioteca centralizzata del Dipartimento di Agraria}
-\cvitem{luglio 2012} {\textbf{Part-time studentesco}\newline Svolto presso il laboratorio del Dipartimento di Scienze dell'Informazione}
+\section{Talks}
 
-\section{Accreditamenti}
-\cvitem{maggio 2013}{\textbf{Test TECO}\newline Esito: 1225 (media nazionale: 1000)}
-\cvitem{gennaio 2013} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
-\cvitem{novembre 2012} {\textbf{Idoneità Linguistica Inglese B1}\newline Idoneità linguistica di livello B1 conseguita presso il CILTA dell'Università di Bologna}
-\cvitem{gennaio 2012} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
-\cvitem{gennaio 2011} {\textbf{Borsa di Studio}\newline Borsa di studio per reddito erogata dall'azienda ER.GO}
+\cvitem{2016 / 09}{Angular2 + Redux (ngrx/store) @ TIM
+	WCAP for BolognaJS -- \url{http://slides.com/phra/angular2-redux}}
 
-\section{Lingue Straniere}
-\cvitem{\textbf{Inglese}}{Scritto: ottimo\newline Parlato: buono}
+\cvitem{2016 / 03}{How to Be a Full Stack Developer with LoopBack, JSPM and Angular2 @ TIM
+WCAP for BolognaJS -- \url{http://slides.com/phra/full-stack}}
 
-\section{Conoscenze Informatiche}
-\cvitem{\textbf{Linguaggi conosciuti}}{C\newline C++ (+ boost)\newline Java (+ android, libgdx, gwt, struts2)\newline Python\newline Bash\newline HTML5\newline CSS3 (+ SASS, LESS)\newline Javascript (+ nodejs, angular, jquery)\newline SQL\newline \LaTeX (+ tikz)}
-\cvitem{\textbf{Competenze acquisite}}{Amministrazione di sistemi GNU/Linux\newline Configurazione di servers PostgreSQL\newline Familiarità con terminali Bash\newline Sviluppo web con architettura REST\newline Sviluppo applicazioni mobili per Android con API native oppure con LibGDX\newline Sviluppo software in C secondo standard ANSI/POSIX\newline Analisi, progettazione ed implementazione di applicativi web\newline Task Automation\newline Continous Integration\newline Test Driven Development}
 
-\cvitem{\textbf{Daily distro}}{Debian}
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
 
-\section{Progetti}
-\cvitem{marzo 2014} {\textbf{Realizzazione progetto di Tesi} \cite{progettotesi}\newline Sviluppo di un proxy ad alta affidabilità che possa utilizzare più interfacce di rete per comunicare in modo {\em simplex} oppure {\em full-duplex} con un altro {\em peer} [scritto in: C++ con libreria Boost]}
+\section{Awards and Honors}
 
-\cvitem{gennaio 2014} {\textbf{Realizzazione progetto del corso di "Sviluppo di Sistemi Virtuali"} \cite{vsd}\newline Sviluppo di un modulo per la macchina virtuale parziale UMView per il controllo della connettività di un singolo processo attraverso l'intercettazione delle {\em syscalls} di rete [scritto in: C]}
+\cvitem{2016 / 04}{8th @ CTF "Hands off my money" -- 265 -- \url{http://ctf.shielder.it/scoreboard}}
+\cvitem{2013 / 05}{Test TECO -- 1225}
+\cvitem{2013 / 01}{Scholarship}
+\cvitem{2012 / 11}{English B1}
+\cvitem{2012 / 01}{Scholarship}
+\cvitem{2011 / 01}{Scholarship}
 
-\cvitem{novembre 2013} {\textbf{Rilascio prima versione dell'applicazione Android {\em Trovatutto}} \cite{trovatutto} \newline Pubblicazione di un'applicazione per {\em smartphones} Android per la mappatura di esercizi commerciali e servizi pubblici di tutta Italia, dove qualsiasi utente può aggiungere istantaneamente nuovi punti di interesse visibili da tutti [scritto in: Java (Android), Python, SQL (postgresql)]}
 
-\cvitem{settembre 2013} {\textbf{Realizzazione progetto del corso di "Sviluppo di Applicazioni Mobili"} \cite{shuttle}\newline Sviluppo di un videogioco single-player e multi-player 2D {\em cross-platform} per Android, iOS, PC e HTML5 attraverso il framework {\em LibGDX} [scritto in: Java (LibGDX)]}
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
 
-\cvitem{luglio 2013} {\textbf{Realizzazione progetto del corso di "Ingegneria del Software"} \cite{lis}\newline Sviluppo di una piattaforma {\em browser-based} per la gestione di un sistema di noleggio automobili distribuito [scritto in: Java (GWT), SQL (postgresql)]}
+\section{Foreign languages}
 
-\cvitem{settembre 2012} {\textbf{Realizzazione progetto del corso di "Sistemi Operativi"} \cite{so}\newline Sviluppo di un kernel minimale per l'architettura MIPS [scritto in: C]}
+\cvitemwithcomment{Italian}{Native}{}
+\cvitemwithcomment{English}{Proficient}{}
+%\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
+%\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
 
-\cvitem{luglio 2012} {\textbf{Rilascio prima versione di {\em phoxy}} \cite{phoxy}\newline Pubblicazione di un proxy in grado di trasformare la comunicazione TCP tra un client ed un server in datagrammi UDP eventualmente cifrati con algoritmo a chiave simmetrica {\em AES256} [scritto in: C]}
 
-\cvitem{maggio 2012} {\textbf{Realizzazione progetto del corso di "Reti di Calcolatori"} \cite{reti}\newline Sviluppo di un proxy in grado di trasformare un flusso TCP in datagrammi UDP, gestendo i pacchetti persi, doppi, fuori ordine e sfruttando tre canali di comunicazione [scritto in: C]}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
 
-\cvitem{febbraio 2012} {\textbf{Realizzazione progetto del corso di "Tecnologie Web"} \cite{progettotw} \cite{codicetw}\newline Sviluppo di un sito web basato su architettura REST per facilitare la geolocalizzazione di negozi e servizi pubblici di Bologna ed altre città [scritto in: HTML5, CSS3, Javascript (jquery), Python]}
+\section{Work experiences}
 
-% voi aggiungete tutte le voci che ritenete opportune
-% nel caso abbiate delle pubblicazioni, dopo aver creato l'opportuno file .bib
-% NB: io ho disbilitato questi comandi
-%\nocite{*}
-\bibliographystyle{unsrt}
-\bibliography{biblio.bib}    
+%\subsection{Vocational}
 
-% Ora ci resta solo che inserire la liberatoria per la privaci
-% Io ho scannerizzato direttamente la mia firma e l'ho inserita come 
-% immagine. Nel caso vogliate mettere dei puntini e firmare personalmente
-% ogni CV dopo il "in fede" scrivere \makebox[9cm]{\dotfill}
-\vspace{\fill}
-{\footnotesize\noindent
-Il sottoscritto è a conoscenza che, ai sensi dell'art. 26 della legge 15/68, le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi sono puniti ai sensi del codice penale e delle leggi speciali ed autorizza al trattamento dei dati personali, in conformità alle disposizioni della legge sulla privacy (D.L.196/03). Inoltre, il sottoscritto ricorda che tutto il codice allegato è rilasciato sotto licenza GNU GPLv2 (o versioni successive) e le relative documentazioni sotto licenza CC BY-NC-SA, ove non specificato diversamente.}
-\vspace*{0.8cm}\\
-Bologna, \today\hfill In fede: \makebox[7cm] {\includegraphics[scale=.07]{firma}}
-%\makebox[9cm]{\dotfill}
-%per scalare la grandezza dell'immagine di firma, variate il parametro “scale”
+\cventry{2016/08 -- 2017/07}{Full Stack Developer}{\textsc{Wonderflow}}{Amsterdam}{}{
+\begin{itemize}
+	\item Frontend development with Angular
+	\item Backend development with NodeJS and GraphQL
+	\item Big Data with MongoDB
+	\item DevOps with Ansible
+	\item CI/CD with Jenkins
+	\item SysAdmin
+	\item Security Assessment
+\end{itemize}}
+
+\cventry{2016/07}{Freelancer}{\textsc{DiTech}}{Bologna}{}{
+\begin{itemize}
+	\item Frontend development
+\end{itemize}}
+
+\cventry{2016/02 -- 2016/07}{Full Stack Developer}{\textsc{ESIS}}{Bologna}{}{
+\begin{itemize}
+	\item JavaScript Specialist
+	\item Lecturer
+\end{itemize}}
+
+\cventry{2014/07 -- 2015/05}{IT Consultant}{\textsc{ALTEN}}{Bologna}{@ UniCredit Group}{
+\begin{itemize}
+\item Analysis
+	\begin{itemize}
+	\item Requirements gathering
+	\item Requirements analysis
+	\item E/R and workflow specs
+	\end{itemize}
+\item Development
+	\begin{itemize}
+	\item Development of a prototypal solution based on JavaEE + Struts2 + Hibernate stack
+	\end{itemize}
+\item Functional
+	\begin{itemize}
+	\item Progress of work monitoring
+	\item Feature validation
+	\end{itemize}
+\item UAT:
+	\begin{itemize}
+	\item Writing of User Acceptance Test specs
+	\end{itemize}
+\item Testing / QA
+	\begin{itemize}
+	\item Tickets management
+	\item Project Manager support
+	\item Validation of bugs resolutions
+	\item Deployment requests management
+	\end{itemize}
+\item Customer Support
+	\begin{itemize}
+	\item Tickets management
+	\end{itemize}
+\end{itemize}}
+
+
+%------------------------------------------------
+
+%\cventry{2010--2011}{Summer Intern}{\textsc{Lehman Brothers}}{Los Angeles}{}{Rated "truly distinctive" for Analytical Skills and Teamwork.}
+
+%------------------------------------------------
+
+\subsection{Miscellaneous}
+
+\cventry{2014 / 03}{Part-time}{University of Bologna}{}{}{}
+\cventry{2012 / 07}{Part-time}{University of Bologna}{}{}{}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\cvitem{DevOps}{SysAdmin, Provisioning, Continous integration, Continous delivery}
+\cvitem{Languages}{Bash, JavaScript, Python, SQL, HTML5, CSS3, C, C++, Java, \LaTeX}
+\cvitem{JavaScript}{ES5, ES2015, ES2016, ES2017, ESnext, Angular, React, LoopBack}
+\cvitem{Applications}{Nginx, NodeJS, Apache, Postfix, Jenkins, Atlassian}
+\cvitem{Databases}{MySQL, PostgreSQL, MongoDB, Cassandra}
+\cvitem{DVCS}{Git}
+\cvitem{Misc}{ViM, Tmux}
+\cvitem{Management}{Team leading, Scrum}
+\cvitem{Pentesting}{Nmap, Sqlmap, BeEF, DirBuster, Burp, MetaSploit}
+\cvitem{Daily distro}{Debian}
+
+
+\section{Projects}
+\cvitem{2015} {\textbf{Startup Idea} \newline Online Grorecy Delivery Service [NodeJS / Angular]}
+
+\cvitem{2014 / 03} {\textbf{Thesis} \newline Cross-platform Multi-network High-Availibilty Full-duplex Proxy [C++ / Boost]}
+
+\cvitem{2014 / 01} {\textbf{Virtualization class project} \newline UMView partial virtual machine module for monitoring of network connections [C]}
+
+\cvitem{2013 / 11} {\textbf{Android application {\em Trovatutto}} \newline Collaborative application for geolocation of shops, services, etc [Java (Android), Python, SQL (PostgreSQL)]}
+
+\cvitem{2013 / 09} {\textbf{Mobile application class project} \newline Development of a cross-platform 2D mobile game based on LibGDX framework. {\em LibGDX} [Java (LibGDX)]}
+
+\cvitem{2013 / 07} {\textbf{Software engineering class project} \newline Browser-based car rental system [Java (GWT), SQL (postgresql)]}
+
+\cvitem{2012 / 09} {\textbf{Operating system class project} \newline Micro kernel for MIPS architecture [C]}
+
+\cvitem{2012 / 07} {\textbf{Phoxy} \newline TCP-to-UDP-to-TCP proxy w/ AES support [C]}
+
+\cvitem{2012 / 05} {\textbf{Computer networks class project}\newline TCP-to-UDP-to-TCP proxy [C]}
+
+\cvitem{2012 / 02} {\textbf{Web Development class project}\newline Browser based service for geolocating shops, pharmacies, etc [HTML5, CSS3, Javascript (jQuery), Python]}
+
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Communication Skills}
+
+\cvitem{}{Technical Talks}
+%\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+%\cvlistdoubleitem{Crittografia}{Crittografia}
+%\cvlistdoubleitem{Forensica}{Dancing}
+\cvlistitem{Computer security}
+\cvlistitem{Pentesting}
+\cvlistitem{Forensics}
+\cvlistitem{DevOps}
+\cvlistitem{JavaScript}
+\cvlistitem{Rapid prototyping}
+\cvlistitem{IT Automation}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{Risorse Umane}{Tesla Consulting\\Piazza dei Colori, 26\\Bologna 40138} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Alla cortese attenzione del reparto HR} % Opening greeting
+%\closing{Distinti saluti,} % Closing phrase
+%\enclosure[In allegato]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%Ho deciso di candidarmi per questa posizione lavorativa in quanto seguo Tesla Consulting da parecchio tempo, avendola conosciuta in occasione della prima edizione de {\em Hackinbo} e successivamente grazie ai servizi girati per il programma televisivo {\em Le Iene}. Sono da sempre affascinato ed interessato alla sicurezza informatica e sono convinto di poter crescere ed imparare molto da una esperienza come questa.
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
 \end{document}
